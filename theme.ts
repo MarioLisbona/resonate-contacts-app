@@ -1,20 +1,18 @@
-// import { brandButton } from '@/styles/brandButton';
 import { extendTheme } from "@chakra-ui/react";
+import { appButton } from "./buttons";
 
 const theme = extendTheme({
   colors: {
-    brandRed: "#D92027",
-    brandBlue: "#191C43",
-    bgYellow: "#FDFAF1",
-    bgPink: "#FDF1F1",
-    bgBlue: "#F1F2FD",
-    brandDarkGray: "#333333",
+    brandOrange: "#F14C23",
+    brandDarkBlue: "#2B2A35",
+    brandBlue: "#1B75BB",
+    brandLightBlue: "#ECF4F9",
   },
   fonts: {
     heading: `'Magistral', sans-serif`,
     body: `'Poppins', sans-serif`,
   },
-  // components: { Button: brandButton },
+  components: { Button: appButton },
   textStyles: {
     heading: {
       fontFamily: "heading",
