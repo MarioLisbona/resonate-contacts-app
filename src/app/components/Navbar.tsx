@@ -129,8 +129,10 @@ export default function Navbar() {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {navbarLinks.map((link, idx) => (
+                <NavLink key={idx} href={link.href}>
+                  {link.label}
+                </NavLink>
               ))}
             </Stack>
           </Box>
