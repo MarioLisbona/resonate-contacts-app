@@ -21,9 +21,31 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import logo from "../../../public/images/ResonateLogo.png";
 
-const Links = ["Dashboard", "Projects", "Team"];
+interface NavbarLinksProps {
+  label: string;
+  href: string;
+  external: boolean;
+}
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const navbarLinks: Array<NavbarLinksProps> = [
+  {
+    label: "Home",
+    href: "/",
+    external: false,
+  },
+  {
+    label: "Contacts",
+    href: "/contacts",
+    external: false,
+  },
+  {
+    label: "About",
+    href: "/about",
+    external: false,
+  },
+];
+
+const NavLink = ({ children, href }: { children: ReactNode; href: string }) => (
   <Link
     px={2}
     py={1}
@@ -32,7 +54,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: "none",
       bg: useColorModeValue("gray.200", "gray.700"),
     }}
-    href={"#"}
+    href={href}
   >
     {children}
   </Link>
@@ -71,8 +93,10 @@ export default function Navbar() {
               spacing={4}
               display={{ base: "none", md: "flex" }}
             >
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {navbarLinks.map((link, idx) => (
+                <NavLink key={idx} href={link.href}>
+                  {link.label}
+                </NavLink>
               ))}
             </HStack>
           </HStack>
