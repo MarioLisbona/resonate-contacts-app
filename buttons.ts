@@ -69,8 +69,4 @@ export const appButton = defineStyleConfig({
     whiteSqBtn,
     linkBtn,
   },
-  defaultProps: {
-    size: "lg",
-    variant: "whiteSqBtn",
-  },
 });

@@ -75,7 +75,7 @@ export default function Navbar() {
               <MenuButton
                 as={Button}
                 rounded={"full"}
-                variant={"link"}
+                variant={"linkBtn"}
                 cursor={"pointer"}
                 minW={0}
               >
