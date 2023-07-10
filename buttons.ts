@@ -50,15 +50,15 @@ const whiteSqBtn = defineStyle({
 });
 
 const linkBtn = defineStyle({
-  fontSize: ["16px", "20px", "24px", "26px", "28px"],
+  fontSize: { base: "16px", lg: "18px" },
   h: { base: "24px", lg: "54px" },
-  minW: "100px",
   padding: "0",
   fontWeight: { base: "500", lg: "600" },
   lineHeight: "1",
   _hover: {
     transform: "translateY(2px)",
     transition: "all 0.3s ease 0s",
+    color: "brandOrange",
   },
 });
 
