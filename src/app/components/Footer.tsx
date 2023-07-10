@@ -23,18 +23,16 @@ export default function Footer() {
         as={Stack}
         maxW={"6xl"}
         py={4}
-        direction={{ base: "column", md: "row" }}
+        direction={{ base: "column" }}
         spacing={4}
         justify={{ base: "center", md: "space-between" }}
         align={{ base: "center", md: "center" }}
       >
         <Stack direction={"row"} spacing={6}>
-          <Link href={"#"}>Home</Link>
-          <Link href={"#"}>About</Link>
-          <Link href={"#"}>Blog</Link>
-          <Link href={"#"}>Contact</Link>
+          <Link href={"#"}>GitHub</Link>
+          <Link href={"#"}>LinkedIn</Link>
         </Stack>
-        <Text>© 2022 Chakra Templates. All rights reserved</Text>
+        <Text>© 2023 Mario Lisbona</Text>
       </Container>
     </Box>
   );
