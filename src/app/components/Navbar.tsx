@@ -61,9 +61,11 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box>
-              <Image boxSize={"50px"} src={logo.src} alt={"Resonate logo"} />
-            </Box>
+            <Link href={"/"}>
+              <Box>
+                <Image boxSize={"50px"} src={logo.src} alt={"Resonate logo"} />
+              </Box>
+            </Link>
             <HStack
               as={"nav"}
               spacing={4}
