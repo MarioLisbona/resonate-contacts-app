@@ -13,12 +13,11 @@ type Params = {
 export default function Contact({ params: { slug } }: Params) {
   const contact = testContacts.find((contact) => contact.id === Number(slug));
 
-  console.log(contact);
   return (
     <SectionContainer>
-      <Text textStyle={"heading"}>heading</Text>
-      <Text textStyle={"subheading"}>subheading</Text>
-      <Text textStyle={"context"}>{slug}</Text>
+      <Text textStyle={"heading"}>{contact?.name}</Text>
+      <Text textStyle={"subheading"}>{contact?.username}</Text>
+      <Text textStyle={"context"}>{contact?.email}</Text>
     </SectionContainer>
   );
 }
