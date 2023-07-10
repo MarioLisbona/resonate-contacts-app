@@ -44,7 +44,7 @@ export default function Navbar() {
   return (
     <>
       <Box
-        bg={useColorModeValue("gray.100", "gray.900")}
+        bg={"brandLightBlue"}
         px={4}
         position="fixed"
         top={0}
