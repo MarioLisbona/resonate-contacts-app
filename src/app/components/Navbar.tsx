@@ -16,8 +16,10 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
+  Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import logo from "../../../public/images/ResonateLogo.png";
 
 const Links = ["Dashboard", "Projects", "Team"];
 
@@ -59,7 +61,9 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box>Logo</Box>
+            <Box>
+              <Image boxSize={"50px"} src={logo.src} alt={"Resonate logo"} />
+            </Box>
             <HStack
               as={"nav"}
               spacing={4}
