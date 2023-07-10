@@ -1,5 +1,7 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import Image from "next/image";
+import styles from "./page.module.css";
+import { Text } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -7,7 +9,10 @@ export default function Home() {
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
+          <code className={styles.code}>/something/src/app/page.tsx</code>
+          <Text textStyle={"heading"}>This is a heading</Text>
+          <Text textStyle={"subheading"}>This is a heading</Text>
+          <Text textStyle={"context"}>This is a heading</Text>
         </p>
         <div>
           <a
@@ -15,7 +20,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
+            By{" "}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -91,5 +96,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }
