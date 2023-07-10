@@ -10,131 +10,28 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
+import { ContactProps } from "@/data/contacts";
 
-export default function CardGrid() {
+export default function CardGrid({ contacts }: { contacts: ContactProps[] }) {
   return (
     <SectionContainer>
       <SimpleGrid
         spacing={4}
-        templateColumns="repeat(auto-fill, minmax(250px, 1fr))"
+        templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
       >
-        <Card>
-          <CardHeader>
-            <Heading size="md"> Customer dashboard</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              View a summary of all your customers over the last month.
-            </Text>
-          </CardBody>
-          <CardFooter>
-            <Button>View here</Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md"> Customer dashboard</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              View a summary of all your customers over the last month.
-            </Text>
-          </CardBody>
-          <CardFooter>
-            <Button>View here</Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md"> Customer dashboard</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              View a summary of all your customers over the last month.
-            </Text>
-          </CardBody>
-          <CardFooter>
-            <Button>View here</Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md"> Customer dashboard</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              View a summary of all your customers over the last month.
-            </Text>
-          </CardBody>
-          <CardFooter>
-            <Button>View here</Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md"> Customer dashboard</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              View a summary of all your customers over the last month.
-            </Text>
-          </CardBody>
-          <CardFooter>
-            <Button>View here</Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md"> Customer dashboard</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              View a summary of all your customers over the last month.
-            </Text>
-          </CardBody>
-          <CardFooter>
-            <Button>View here</Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md"> Customer dashboard</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              View a summary of all your customers over the last month.
-            </Text>
-          </CardBody>
-          <CardFooter>
-            <Button>View here</Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md"> Customer dashboard</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              View a summary of all your customers over the last month.
-            </Text>
-          </CardBody>
-          <CardFooter>
-            <Button>View here</Button>
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader>
-            <Heading size="md"> Customer dashboard</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              View a summary of all your customers over the last month.
-            </Text>
-          </CardBody>
-          <CardFooter>
-            <Button>View here</Button>
-          </CardFooter>
-        </Card>
+        {contacts.map((contact, idx) => (
+          <Card key={idx}>
+            <CardHeader>
+              <Heading size="md">{contact.name}</Heading>
+            </CardHeader>
+            <CardBody>
+              <Text>{contact.username}</Text>
+            </CardBody>
+            <CardFooter>
+              <Button>View more</Button>
+            </CardFooter>
+          </Card>
+        ))}
       </SimpleGrid>
     </SectionContainer>
   );
