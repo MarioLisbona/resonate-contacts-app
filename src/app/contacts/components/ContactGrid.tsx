@@ -13,7 +13,7 @@ export default function ContactGrid({
   return (
     <SimpleGrid
       spacing={4}
-      templateColumns="repeat(auto-fill, minmax(250px, 1fr))"
+      templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
     >
       {contacts.map((contact, idx) => (
         // <ContactCard key={idx} contact={contact} />

@@ -24,7 +24,6 @@ const filledSqBtn = defineStyle({
   lineHeight: "1",
   background: "brandBlue",
   color: "white",
-  boxShadow: "0px 10px 25px rgba(217, 32, 39, .5)",
   _hover: {
     transform: "translateY(2px)",
     transition: "transform 0.2s ease",
