@@ -29,7 +29,7 @@ export default function PreviewCard({ contact }: { contact: ContactProps }) {
       >
         <Icon
           as={RiContactsLine}
-          color={"gray.600"}
+          color={"gray.500"}
           w={{ base: "80px", md: "110px" }}
           h={{ base: "80px", md: "110px" }}
         />
@@ -58,9 +58,9 @@ export default function PreviewCard({ contact }: { contact: ContactProps }) {
             <Button
               variant={"filledSqBtn"}
               flex={1}
-              bg={"brandDarkBlue"}
+              bg={"brandOrange"}
               _focus={{
-                bg: "brandOrange",
+                bg: "orange.500",
               }}
             >
               View More
@@ -74,7 +74,7 @@ export default function PreviewCard({ contact }: { contact: ContactProps }) {
               variant={"filledSqBtn"}
               flex={1}
               _focus={{
-                bg: "brandOrange",
+                bg: "blue.500",
               }}
             >
               Show Map

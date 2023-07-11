@@ -18,7 +18,7 @@ export default async function Contacts() {
 
   return (
     <SectionContainer>
-      <Header />
+      <Header>Contacts</Header>
       <ContactGrid contacts={contacts} />
     </SectionContainer>
   );
