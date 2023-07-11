@@ -35,7 +35,7 @@ const whiteSqBtn = defineStyle({
   paddingX: "0",
   fontSize: { base: "16px", lg: "18px" },
   h: { base: "44px", lg: "54px" },
-  w: { base: "160px", md: "200px", xl: "250px" },
+  w: { base: "120px", md: "150px" },
   // maxW: { base: '284px', lg: '359px ' },
   fontWeight: { base: "500", lg: "600", xl: "700" },
   lineHeight: "1",

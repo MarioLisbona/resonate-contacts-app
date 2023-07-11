@@ -3,6 +3,7 @@ import SectionContainer from "../../components/SectionContainer";
 import { fetchContact } from "@/app/utils";
 import ContactInfo from "./components/ContactInfo";
 import { Metadata } from "next";
+import PrevNext from "./components/PrevNext";
 
 type Params = {
   params: {
@@ -28,6 +29,7 @@ export default async function Contact({ params: { slug } }: Params) {
   return (
     <SectionContainer>
       <ContactInfo contact={contact} />
+      <PrevNext contact={contact} />
     </SectionContainer>
   );
 }
