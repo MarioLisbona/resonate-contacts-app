@@ -3,6 +3,7 @@ import SectionContainer from "@/app/components/SectionContainer";
 import { Button, Flex, Icon, Link } from "@chakra-ui/react";
 import React from "react";
 import { ContactProps } from "@/data/contacts";
+import { GrCaretPrevious, GrCaretNext } from "react-icons/gr";
 
 export default function PrevNext({
   contact,
@@ -12,19 +13,25 @@ export default function PrevNext({
   length: number;
 }) {
   return (
-    <SectionContainer>
-      <Flex w={"100"} align={"center"} justify={"center"}>
-        <Link href={`/contacts/${contact.id - 1}`}>
-          <Button me={"2rem"} variant={"linkBtn"} isDisabled={contact.id <= 1}>
-            Previous
-          </Button>
-        </Link>
-        <Link href={`/contacts/${contact.id + 1}`}>
-          <Button variant={"linkBtn"} isDisabled={contact.id === length}>
-            Next
-          </Button>
-        </Link>
-      </Flex>
-    </SectionContainer>
+    <Flex w={"100"} align={"center"} justify={"center"}>
+      <Link href={`/contacts/${contact.id - 1}`}>
+        <Button me={"2rem"} variant={"linkBtn"} isDisabled={contact.id <= 1}>
+          <Icon
+            as={GrCaretPrevious}
+            w={{ base: "18px", md: "30px" }}
+            h={{ base: "18px", md: "30px" }}
+          />
+        </Button>
+      </Link>
+      <Link href={`/contacts/${contact.id + 1}`}>
+        <Button variant={"linkBtn"} isDisabled={contact.id === length}>
+          <Icon
+            as={GrCaretNext}
+            w={{ base: "18px", md: "30px" }}
+            h={{ base: "18px", md: "30px" }}
+          />
+        </Button>
+      </Link>
+    </Flex>
   );
 }
