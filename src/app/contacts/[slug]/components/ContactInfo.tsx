@@ -62,22 +62,30 @@ export default function ContactInfo({ contact }: { contact: ContactProps }) {
           <Text textStyle={"smContext"} mt={"0"}>
             {contact.company.bs}
           </Text>
-          <Text textStyle={"smheading"}>{contact.website}</Text>
+          <Link
+            href={`https://www.${contact.website}`}
+            color={"brandBlue"}
+            target={"_blank"}
+          >
+            {contact.website}
+          </Link>
           <Stack
-            // spacing={2}
+            spacing={2}
             divider={
               <StackDivider
                 borderColor={useColorModeValue("gray.100", "gray.700")}
               />
             }
           >
-            <Feature
-              icon={
-                <Icon as={MdOutlineEmail} color={"brandOrange"} w={5} h={5} />
-              }
-              iconBg={"brandLightBlue"}
-              text={contact.email}
-            />
+            <Link href={`mailto:${contact.email}`}>
+              <Feature
+                icon={
+                  <Icon as={MdOutlineEmail} color={"brandOrange"} w={5} h={5} />
+                }
+                iconBg={"brandLightBlue"}
+                text={contact.email}
+              />
+            </Link>
 
             <Feature
               icon={<Icon as={MdBusiness} color={"brandOrange"} w={5} h={5} />}
