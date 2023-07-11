@@ -33,17 +33,11 @@ export default function PreviewCard({ contact }: { contact: ContactProps }) {
           w={{ base: "80px", md: "110px" }}
           h={{ base: "80px", md: "110px" }}
         />
-        <Heading fontSize={"2xl"} fontFamily={"body"}>
-          {contact.name}
-        </Heading>
-        <Text fontWeight={600} color={"gray.500"} mb={4}>
+        <Text textStyle={"subheading"}>{contact.name}</Text>
+        <Text textStyle={"smheading"} mb={4}>
           {contact.username}
         </Text>
-        <Text
-          textAlign={"center"}
-          color={useColorModeValue("gray.700", "gray.400")}
-          px={3}
-        >
+        <Text textStyle={"smBold"} px={3}>
           <Link
             href={`https://www.${contact.website}`}
             color={"brandBlue"}
