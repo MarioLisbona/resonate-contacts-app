@@ -8,8 +8,8 @@ import {
   useColorModeValue,
   Icon,
 } from "@chakra-ui/react";
-import { SiGithub } from "react-icons/Si";
-import { SiLinkedin } from "react-icons/Si";
+import { SiGithub } from "react-icons/si";
+import { SiLinkedin } from "react-icons/si";
 
 export default function Footer() {
   return (
