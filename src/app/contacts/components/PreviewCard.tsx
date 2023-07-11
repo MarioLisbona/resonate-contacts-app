@@ -29,6 +29,7 @@ export default function PreviewCard({ contact }: { contact: ContactProps }) {
       >
         <Icon
           as={RiContactsLine}
+          color={"gray.600"}
           w={{ base: "80px", md: "110px" }}
           h={{ base: "80px", md: "110px" }}
         />
@@ -45,7 +46,7 @@ export default function PreviewCard({ contact }: { contact: ContactProps }) {
         >
           <Link
             href={`https://www.${contact.website}`}
-            color={"blue.400"}
+            color={"brandBlue"}
             target={"_blank"}
           >
             {contact.website}
