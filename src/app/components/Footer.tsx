@@ -9,6 +9,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { SiGithub } from "react-icons/Si";
+import { SiLinkedin } from "react-icons/Si";
 
 export default function Footer() {
   return (
@@ -47,7 +48,16 @@ export default function Footer() {
             href={"https://www.linkedin.com/in/mariolisbona/"}
             target={"_blank"}
           >
-            LinkedIn
+            <Icon
+              as={SiLinkedin}
+              w={{ base: "18px", md: "30px" }}
+              h={{ base: "18px", md: "30px" }}
+              _hover={{
+                transform: "translateY(2px)",
+                transition: "all 0.3s ease 0s",
+                color: "brandOrange",
+              }}
+            />
           </Link>
         </Stack>
         <Text>© 2023 Mario Lisbona</Text>
