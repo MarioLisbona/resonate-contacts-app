@@ -21,7 +21,6 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import logo from "../../../public/images/ResonateLogo.png";
-import profilePic from "../../../public/images/profile-pic.jpeg";
 
 interface NavbarLinksProps {
   label: string;
@@ -87,39 +86,6 @@ export default function Navbar() {
               ))}
             </HStack>
           </HStack>
-          <Flex alignItems={"center"}>
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={"full"}
-                variant={"linkBtn"}
-                cursor={"pointer"}
-                minW={0}
-              >
-                <Avatar size={"sm"} src={profilePic.src} />
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Mario Lisbona</MenuItem>
-                <MenuDivider />
-                <MenuItem>
-                  <Link
-                    href={"https://github.com/MarioLisbona"}
-                    target={"_blank"}
-                  >
-                    <Button variant={"linkSmallBtn"}>Github</Button>
-                  </Link>
-                </MenuItem>
-                <MenuItem>
-                  <Link
-                    href={"https://www.linkedin.com/in/mariolisbona/"}
-                    target={"_blank"}
-                  >
-                    <Button variant={"linkSmallBtn"}>LinkedIn</Button>
-                  </Link>
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </Flex>
         </Flex>
 
         {isOpen ? (
