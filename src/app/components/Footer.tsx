@@ -6,7 +6,10 @@ import {
   Text,
   Link,
   useColorModeValue,
+  Icon,
 } from "@chakra-ui/react";
+import { SiGithub } from "react-icons/Si";
+import { SiLinkedin } from "react-icons/Si";
 
 export default function Footer() {
   return (
@@ -29,8 +32,33 @@ export default function Footer() {
         align={{ base: "center", md: "center" }}
       >
         <Stack direction={"row"} spacing={6}>
-          <Link href={"#"}>GitHub</Link>
-          <Link href={"#"}>LinkedIn</Link>
+          <Link href={"https://github.com/MarioLisbona"} target={"_blank"}>
+            <Icon
+              as={SiGithub}
+              w={{ base: "18px", md: "30px" }}
+              h={{ base: "18px", md: "30px" }}
+              _hover={{
+                transform: "translateY(2px)",
+                transition: "all 0.3s ease 0s",
+                color: "brandOrange",
+              }}
+            />
+          </Link>
+          <Link
+            href={"https://www.linkedin.com/in/mariolisbona/"}
+            target={"_blank"}
+          >
+            <Icon
+              as={SiLinkedin}
+              w={{ base: "18px", md: "30px" }}
+              h={{ base: "18px", md: "30px" }}
+              _hover={{
+                transform: "translateY(2px)",
+                transition: "all 0.3s ease 0s",
+                color: "brandOrange",
+              }}
+            />
+          </Link>
         </Stack>
         <Text>© 2023 Mario Lisbona</Text>
       </Container>
