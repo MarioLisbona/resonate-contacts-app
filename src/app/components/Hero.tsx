@@ -10,51 +10,49 @@ import {
   IconProps,
   Link,
 } from "@chakra-ui/react";
+import SectionContainer from "./SectionContainer";
 
 export default function Hero() {
   return (
-    <Container maxW={"4xl"}>
-      <Stack
-        textAlign={"center"}
-        align={"center"}
-        spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
-      >
-        <Text textStyle={"heading"}>
-          Organising your life and your friends{" "}
-          <Text as={"span"} color={"brandOrange"}>
-            made easy
+    <SectionContainer>
+      <Container maxW={"4xl"}>
+        <Stack
+          textAlign={"center"}
+          align={"center"}
+          spacing={{ base: 8, md: 10 }}
+        >
+          <Text textStyle={"heading"}>
+            Organising your life and your friends{" "}
+            <Text as={"span"} color={"brandOrange"}>
+              made easy
+            </Text>
           </Text>
-        </Text>
-        <Text color={"gray.500"} maxW={"3xl"}>
-          Never miss a meeting. Never be late for one too. Keep track of your
-          meetings and receive smart reminders in appropriate times. Read your
-          smart “Daily Agenda” every morning.
-        </Text>
-        <Stack spacing={6} direction={"row"}>
-          <Link href={"/contacts"}>
-            <Button
-              rounded={"full"}
-              px={6}
-              colorScheme={"orange"}
-              bg={"orange.400"}
-              _hover={{ bg: "orange.500" }}
-            >
-              Get started
-            </Button>
-          </Link>
-          <Button rounded={"full"} px={6}>
-            Learn more
-          </Button>
+          <Text textStyle={"context"} maxW={"3xl"}>
+            Have all your family, friends and work colleagues contact details at
+            your finger tips.
+          </Text>
+          <Stack spacing={6} direction={"row"}>
+            <Link href={"/contacts"}>
+              <Button
+                rounded={"full"}
+                px={6}
+                colorScheme={"orange"}
+                bg={"orange.400"}
+                _hover={{ bg: "orange.500" }}
+              >
+                View Contacts
+              </Button>
+            </Link>
+          </Stack>
+          <Flex w={"full"}>
+            <Illustration
+              height={{ sm: "24rem", lg: "28rem" }}
+              mt={{ base: 12, sm: 16 }}
+            />
+          </Flex>
         </Stack>
-        <Flex w={"full"}>
-          <Illustration
-            height={{ sm: "24rem", lg: "28rem" }}
-            mt={{ base: 12, sm: 16 }}
-          />
-        </Flex>
-      </Stack>
-    </Container>
+      </Container>
+    </SectionContainer>
   );
 }
 
