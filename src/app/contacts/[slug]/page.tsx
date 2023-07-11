@@ -1,6 +1,6 @@
 import React from "react";
 import SectionContainer from "../../components/SectionContainer";
-import { fetchContact } from "@/app/utils";
+import { fetchContact, fetchContacts } from "@/app/utils";
 import ContactInfo from "./components/ContactInfo";
 import { Metadata } from "next";
 import PrevNext from "./components/PrevNext";
@@ -24,12 +24,13 @@ export async function generateMetadata({
 }
 
 export default async function Contact({ params: { slug } }: Params) {
-  const contact = await fetchContact(slug);
+  const contacts = await fetchContacts();
+  const contact = contacts.find((contact) => contact.id === Number(slug))!;
 
   return (
     <SectionContainer>
       <ContactInfo contact={contact} />
-      <PrevNext contact={contact} />
+      <PrevNext contact={contact} length={contacts.length} />
     </SectionContainer>
   );
 }
