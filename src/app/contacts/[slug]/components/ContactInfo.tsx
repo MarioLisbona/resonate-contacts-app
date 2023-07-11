@@ -21,6 +21,8 @@ import {
   IoLogoBitcoin,
   IoSearchSharp,
 } from "react-icons/io5";
+
+import { MdOutlineEmail, MdBusiness, MdContactPhone } from "react-icons/md";
 import { ReactElement } from "react";
 
 interface FeatureProps {
@@ -71,22 +73,22 @@ export default function ContactInfo({ contact }: { contact: ContactProps }) {
           >
             <Feature
               icon={
-                <Icon as={IoAnalyticsSharp} color={"yellow.500"} w={5} h={5} />
+                <Icon as={MdOutlineEmail} color={"brandOrange"} w={5} h={5} />
               }
-              iconBg={useColorModeValue("yellow.100", "yellow.900")}
+              iconBg={"brandLightBlue"}
               text={contact.email}
             />
 
             <Feature
-              icon={<Icon as={IoLogoBitcoin} color={"green.500"} w={5} h={5} />}
-              iconBg={useColorModeValue("green.100", "green.900")}
+              icon={<Icon as={MdBusiness} color={"brandOrange"} w={5} h={5} />}
+              iconBg={"brandLightBlue"}
               text={`${contact.address.suite}, ${contact.address.street}, ${contact.address.city}, ${contact.address.zipcode}`}
             />
             <Feature
               icon={
-                <Icon as={IoSearchSharp} color={"purple.500"} w={5} h={5} />
+                <Icon as={MdContactPhone} color={"brandOrange"} w={5} h={5} />
               }
-              iconBg={useColorModeValue("purple.100", "purple.900")}
+              iconBg={"brandLightBlue"}
               text={contact.phone}
             />
           </Stack>
