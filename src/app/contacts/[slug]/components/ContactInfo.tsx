@@ -62,7 +62,13 @@ export default function ContactInfo({ contact }: { contact: ContactProps }) {
           <Text textStyle={"smContext"} mt={"0"}>
             {contact.company.bs}
           </Text>
-          <Text textStyle={"smheading"}>{contact.website}</Text>
+          <Link
+            href={`https://www.${contact.website}`}
+            color={"brandBlue"}
+            target={"_blank"}
+          >
+            {contact.website}
+          </Link>
           <Stack
             // spacing={2}
             divider={
