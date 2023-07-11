@@ -1,7 +1,13 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, ThemeConfig } from "@chakra-ui/react";
 import { appButton } from "./buttons";
 
+const config: ThemeConfig = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+};
+
 const theme = extendTheme({
+  config,
   colors: {
     brandOrange: "#F14C23",
     brandDarkBlue: "#2B2A35",

@@ -8,7 +8,6 @@ const filledSqLargeBtn = defineStyle({
   lineHeight: "1",
   background: "brandBlue",
   color: "white",
-  boxShadow: "0px 10px 25px rgba(217, 32, 39, .5)",
   _hover: {
     transform: "translateY(2px)",
     transition: "transform 0.2s ease",
@@ -36,7 +35,6 @@ const whiteSqBtn = defineStyle({
   fontSize: { base: "16px", lg: "18px" },
   h: { base: "44px", lg: "54px" },
   w: { base: "120px", md: "150px" },
-  // maxW: { base: '284px', lg: '359px ' },
   fontWeight: { base: "500", lg: "600", xl: "700" },
   lineHeight: "1",
   background: "white",
