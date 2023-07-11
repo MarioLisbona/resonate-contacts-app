@@ -23,9 +23,9 @@ export default function PrevNext({
           />
         </Button>
       </Link>
-      <Link href={"/"}>
+      <Link href={"/contacts"}>
         <Button variant={"filledSqBtn"} bg={"brandOrange"}>
-          Contacts Home
+          Contacts
         </Button>
       </Link>
       <Link href={`/contacts/${contact.id + 1}`}>
