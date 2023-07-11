@@ -25,7 +25,7 @@ export default function Footer() {
       <Container
         as={Stack}
         maxW={"6xl"}
-        py={4}
+        pt={4}
         direction={{ base: "column" }}
         spacing={4}
         justify={{ base: "center", md: "space-between" }}
@@ -34,6 +34,7 @@ export default function Footer() {
         <Stack direction={"row"} spacing={6}>
           <Link href={"https://github.com/MarioLisbona"} target={"_blank"}>
             <Icon
+              p={"0"}
               as={SiGithub}
               w={{ base: "18px", md: "30px" }}
               h={{ base: "18px", md: "30px" }}
