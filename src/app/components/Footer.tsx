@@ -61,7 +61,7 @@ export default function Footer() {
             />
           </Link>
         </Stack>
-        <Text>© 2023 Mario Lisbona</Text>
+        <Text textStyle={"smContext"}>© 2023 Mario Lisbona</Text>
       </Container>
     </Box>
   );

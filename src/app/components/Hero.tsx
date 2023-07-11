@@ -33,13 +33,6 @@ export default function Hero() {
           </Text>
           <Stack spacing={6} direction={"row"}>
             <Link href={"/contacts"}>
-              {/* <Button
-                rounded={"full"}
-                px={6}
-                colorScheme={"orange"}
-                bg={"orange.400"}
-                _hover={{ bg: "orange.500" }}
-              > */}
               <Button variant={"filledSqLargeBtn"}>View Contacts</Button>
             </Link>
           </Stack>
