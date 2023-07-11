@@ -15,12 +15,17 @@ export default function PrevNext({
   return (
     <Flex w={"100"} align={"center"} justify={"center"}>
       <Link href={`/contacts/${contact.id - 1}`}>
-        <Button me={"2rem"} variant={"linkBtn"} isDisabled={contact.id <= 1}>
+        <Button variant={"linkBtn"} isDisabled={contact.id <= 1}>
           <Icon
             as={GrCaretPrevious}
             w={{ base: "18px", md: "30px" }}
             h={{ base: "18px", md: "30px" }}
           />
+        </Button>
+      </Link>
+      <Link href={"/"}>
+        <Button variant={"filledSqBtn"} bg={"brandOrange"}>
+          Contacts Home
         </Button>
       </Link>
       <Link href={`/contacts/${contact.id + 1}`}>
