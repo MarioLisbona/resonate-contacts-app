@@ -66,15 +66,20 @@ export default function PreviewCard({ contact }: { contact: ContactProps }) {
               View More
             </Button>
           </Link>
-          <Button
-            variant={"filledSqBtn"}
-            flex={1}
-            _focus={{
-              bg: "brandOrange",
-            }}
+          <Link
+            href={`https://maps.google.com/?q=${contact.address.geo.lat},${contact.address.geo.lat}`}
+            target={"_blank"}
           >
-            Show Map
-          </Button>
+            <Button
+              variant={"filledSqBtn"}
+              flex={1}
+              _focus={{
+                bg: "brandOrange",
+              }}
+            >
+              Show Map
+            </Button>
+          </Link>
         </Stack>
       </Box>
     </Center>
