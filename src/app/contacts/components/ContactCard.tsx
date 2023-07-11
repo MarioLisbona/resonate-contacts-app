@@ -1,5 +1,5 @@
 import React from "react";
-import SectionContainer from "./SectionContainer";
+import SectionContainer from "../../components/SectionContainer";
 import {
   Card,
   CardHeader,
@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { ContactProps } from "@/data/contacts";
 
-export default function CardGrid({ contact }: { contact: ContactProps }) {
+export default function ContactCard({ contact }: { contact: ContactProps }) {
   return (
     <Card>
       <CardHeader>
