@@ -3,7 +3,8 @@ import { Flex, Text, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import SectionContainer from "../components/SectionContainer";
 
-import { ContactProps } from "../types";
+import { testContacts } from "@/data/contacts";
+import { ContactProps } from "@/data/contacts";
 import { useState, useEffect } from "react";
 import CardGrid from "../components/CardGrid";
 
