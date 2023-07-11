@@ -5,11 +5,24 @@ import SectionContainer from "../components/SectionContainer";
 
 import { testContacts } from "@/data/contacts";
 import { ContactProps } from "@/data/contacts";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CardGrid from "../components/CardGrid";
 
+async function fetchContacts(
+  setContacts: React.Dispatch<React.SetStateAction<ContactProps[]>>
+) {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await res.json();
+  setContacts(data);
+}
+
 export default function Contacts() {
-  const [contacts, setContacts] = useState<ContactProps[]>(testContacts);
+  const [contacts, setContacts] = useState<ContactProps[]>([]);
+
+  useEffect(() => {
+    fetchContacts(setContacts);
+  }, []);
+
   return (
     <SectionContainer>
       <Flex direction={"column"} align={"center"}>
