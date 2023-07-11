@@ -39,11 +39,6 @@ const navbarLinks: Array<NavbarLinksProps> = [
     href: "/contacts",
     external: false,
   },
-  {
-    label: "About",
-    href: "/about",
-    external: false,
-  },
 ];
 
 export default function Navbar() {
