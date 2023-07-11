@@ -70,20 +70,22 @@ export default function ContactInfo({ contact }: { contact: ContactProps }) {
             {contact.website}
           </Link>
           <Stack
-            // spacing={2}
+            spacing={2}
             divider={
               <StackDivider
                 borderColor={useColorModeValue("gray.100", "gray.700")}
               />
             }
           >
-            <Feature
-              icon={
-                <Icon as={MdOutlineEmail} color={"brandOrange"} w={5} h={5} />
-              }
-              iconBg={"brandLightBlue"}
-              text={contact.email}
-            />
+            <Link href={`mailto:${contact.email}`}>
+              <Feature
+                icon={
+                  <Icon as={MdOutlineEmail} color={"brandOrange"} w={5} h={5} />
+                }
+                iconBg={"brandLightBlue"}
+                text={contact.email}
+              />
+            </Link>
 
             <Feature
               icon={<Icon as={MdBusiness} color={"brandOrange"} w={5} h={5} />}
