@@ -1,6 +1,5 @@
 import React from "react";
 import SectionContainer from "../../components/SectionContainer";
-import Header from "@/app/components/Header";
 import { fetchContact } from "@/app/utils";
 import ContactInfo from "./components/ContactInfo";
 import { Metadata } from "next";
@@ -28,7 +27,6 @@ export default async function Contact({ params: { slug } }: Params) {
 
   return (
     <SectionContainer>
-      <Header />
       <ContactInfo contact={contact} />
     </SectionContainer>
   );
