@@ -54,21 +54,23 @@ export default function PreviewCard({ contact }: { contact: ContactProps }) {
         </Text>
 
         <Stack mt={8} direction={"row"} spacing={4}>
+          <Link href={`/contacts/${contact.id}`}>
+            <Button
+              variant={"filledSqBtn"}
+              flex={1}
+              bg={"brandDarkBlue"}
+              _focus={{
+                bg: "brandOrange",
+              }}
+            >
+              View More
+            </Button>
+          </Link>
           <Button
             variant={"filledSqBtn"}
             flex={1}
-            bg={"brandDarkBlue"}
             _focus={{
-              bg: "gray.200",
-            }}
-          >
-            View More
-          </Button>
-          <Button
-            variant={"filledSqBtn"}
-            flex={1}
-            _focus={{
-              bg: "gray.200",
+              bg: "brandOrange",
             }}
           >
             Show Map

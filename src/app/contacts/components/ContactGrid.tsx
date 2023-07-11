@@ -16,7 +16,6 @@ export default function ContactGrid({
       templateColumns="repeat(auto-fill, minmax(320px, 1fr))"
     >
       {contacts.map((contact, idx) => (
-        // <ContactCard key={idx} contact={contact} />
         <PreviewCard key={idx} contact={contact} />
       ))}
     </SimpleGrid>
