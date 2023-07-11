@@ -17,9 +17,11 @@ import {
   useColorModeValue,
   Stack,
   Image,
+  Text,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import logo from "../../../public/images/ResonateLogo.png";
+import profilePic from "../../../public/images/profile-pic.jpeg";
 
 interface NavbarLinksProps {
   label: string;
@@ -44,12 +46,6 @@ const navbarLinks: Array<NavbarLinksProps> = [
     external: false,
   },
 ];
-
-const NavLink = ({ children, href }: { children: ReactNode; href: string }) => (
-  <Link px={2} py={1} href={href}>
-    <Button variant={"linkBtn"}>{children}</Button>
-  </Link>
-);
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -85,9 +81,9 @@ export default function Navbar() {
               display={{ base: "none", md: "flex" }}
             >
               {navbarLinks.map((link, idx) => (
-                <NavLink key={idx} href={link.href}>
-                  {link.label}
-                </NavLink>
+                <Link key={idx} href={link.href}>
+                  <Button variant={"linkBtn"}>{link.label}</Button>
+                </Link>
               ))}
             </HStack>
           </HStack>
@@ -100,18 +96,27 @@ export default function Navbar() {
                 cursor={"pointer"}
                 minW={0}
               >
-                <Avatar
-                  size={"sm"}
-                  src={
-                    "https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
-                  }
-                />
+                <Avatar size={"sm"} src={profilePic.src} />
               </MenuButton>
               <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
+                <MenuItem>Mario Lisbona</MenuItem>
                 <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
+                <MenuItem>
+                  <Link
+                    href={"https://github.com/MarioLisbona"}
+                    target={"_blank"}
+                  >
+                    <Button variant={"linkSmallBtn"}>Github</Button>
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link
+                    href={"https://www.linkedin.com/in/mariolisbona/"}
+                    target={"_blank"}
+                  >
+                    <Button variant={"linkSmallBtn"}>LinkedIn</Button>
+                  </Link>
+                </MenuItem>
               </MenuList>
             </Menu>
           </Flex>
@@ -121,9 +126,9 @@ export default function Navbar() {
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
               {navbarLinks.map((link, idx) => (
-                <NavLink key={idx} href={link.href}>
-                  {link.label}
-                </NavLink>
+                <Link key={idx} href={link.href}>
+                  <Button variant={"linkSmallBtn"}>{link.label}</Button>
+                </Link>
               ))}
             </Stack>
           </Box>

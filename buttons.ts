@@ -49,11 +49,24 @@ const whiteSqBtn = defineStyle({
   borderRadius: "5px",
 });
 
+const linkSmallBtn = defineStyle({
+  fontSize: { base: "12px", lg: "16px" },
+  h: { base: "24px", lg: "54px" },
+  padding: "0",
+  fontWeight: { base: "300", lg: "400" },
+  lineHeight: "1",
+  _hover: {
+    transform: "translateY(2px)",
+    transition: "all 0.3s ease 0s",
+    color: "brandOrange",
+  },
+});
+
 const linkBtn = defineStyle({
   fontSize: { base: "16px", lg: "18px" },
   h: { base: "24px", lg: "54px" },
   padding: "0",
-  fontWeight: { base: "500", lg: "600" },
+  fontWeight: { base: "400", lg: "500" },
   lineHeight: "1",
   _hover: {
     transform: "translateY(2px)",
@@ -68,5 +81,6 @@ export const appButton = defineStyleConfig({
     filledSqBtn,
     whiteSqBtn,
     linkBtn,
+    linkSmallBtn,
   },
 });
