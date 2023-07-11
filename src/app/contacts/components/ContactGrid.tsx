@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { SimpleGrid } from "@chakra-ui/react";
 import ContactCard from "./ContactCard";

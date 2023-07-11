@@ -1,8 +1,10 @@
-"use client";
 import React from "react";
 import SectionContainer from "../../components/SectionContainer";
 import { Text } from "@chakra-ui/react";
 import { testContacts } from "@/data/contacts";
+import Header from "@/app/components/Header";
+import { fetchContact } from "@/app/utils";
+import ContactInfo from "./components/ContactInfo";
 
 type Params = {
   params: {
@@ -10,14 +12,13 @@ type Params = {
   };
 };
 
-export default function Contact({ params: { slug } }: Params) {
-  const contact = testContacts.find((contact) => contact.id === Number(slug));
+export default async function Contact({ params: { slug } }: Params) {
+  const contact = await fetchContact(slug);
 
   return (
     <SectionContainer>
-      <Text textStyle={"heading"}>{contact?.name}</Text>
-      <Text textStyle={"subheading"}>{contact?.username}</Text>
-      <Text textStyle={"context"}>{contact?.email}</Text>
+      <Header />
+      <ContactInfo contact={contact} />
     </SectionContainer>
   );
 }
