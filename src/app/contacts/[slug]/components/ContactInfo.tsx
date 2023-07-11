@@ -9,6 +9,7 @@ import {
   Image,
   Flex,
   Heading,
+  Link,
   Text,
   Stack,
   StackDivider,
@@ -41,7 +42,7 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
       >
         {icon}
       </Flex>
-      <Text fontWeight={600}>{text}</Text>
+      <Text textStyle={"context"}>{text}</Text>
     </Stack>
   );
 };
@@ -51,25 +52,17 @@ export default function ContactInfo({ contact }: { contact: ContactProps }) {
     <Container maxW={"5xl"} py={12}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
-          <Text
-            textTransform={"uppercase"}
-            color={"blue.400"}
-            fontWeight={600}
-            fontSize={"sm"}
-            bg={useColorModeValue("blue.50", "blue.900")}
-            p={2}
-            alignSelf={"flex-start"}
-            rounded={"md"}
-          >
-            Our Story
+          <Text textStyle={"heading"}>{contact.name}</Text>
+          <Text textStyle={"subheading"}>{contact.company.name}</Text>
+          <Text textStyle={"smContext"} mt={"0"}>
+            {contact.company.catchPhrase}
           </Text>
-          <Heading>A digital Product design agency</Heading>
-          <Text color={"gray.500"} fontSize={"lg"}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore
+          <Text textStyle={"smContext"} mt={"0"}>
+            {contact.company.bs}
           </Text>
+          <Text textStyle={"smheading"}>{contact.website}</Text>
           <Stack
-            spacing={4}
+            // spacing={2}
             divider={
               <StackDivider
                 borderColor={useColorModeValue("gray.100", "gray.700")}
@@ -81,19 +74,20 @@ export default function ContactInfo({ contact }: { contact: ContactProps }) {
                 <Icon as={IoAnalyticsSharp} color={"yellow.500"} w={5} h={5} />
               }
               iconBg={useColorModeValue("yellow.100", "yellow.900")}
-              text={"Business Planning"}
+              text={contact.email}
             />
+
             <Feature
               icon={<Icon as={IoLogoBitcoin} color={"green.500"} w={5} h={5} />}
               iconBg={useColorModeValue("green.100", "green.900")}
-              text={"Financial Planning"}
+              text={`${contact.address.suite}, ${contact.address.street}, ${contact.address.city}, ${contact.address.zipcode}`}
             />
             <Feature
               icon={
                 <Icon as={IoSearchSharp} color={"purple.500"} w={5} h={5} />
               }
               iconBg={useColorModeValue("purple.100", "purple.900")}
-              text={"Market Analysis"}
+              text={contact.phone}
             />
           </Stack>
         </Stack>

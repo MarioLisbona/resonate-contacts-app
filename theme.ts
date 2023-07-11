@@ -31,12 +31,13 @@ const theme = extendTheme({
       fontSize: ["21px", "23px", "25px"],
       fontWeight: "700",
       lineHeight: "135%",
+      color: "rgba(0, 0, 0, 0.6)",
     },
     // for body context
     context: {
-      fontSize: ["14px", "16px", "17px"],
+      fontSize: ["14px", "16px", "20px"],
       fontWeight: "400",
-      lineHeight: "175%",
+      lineHeight: "115%",
       color: "rgba(0, 0, 0, 0.6)",
     },
     // for FAQ context
