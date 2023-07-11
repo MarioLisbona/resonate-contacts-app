@@ -17,13 +17,17 @@ const SectionContainer = ({
     md: "50px",
     lg: "80px",
   });
-  const py = useBreakpointValue({
-    base: "40px",
-    lg: "60px",
+  const pt = useBreakpointValue({
+    base: "80px",
+  });
+
+  const pb = useBreakpointValue({
+    base: "110px",
+    lg: "130px",
   });
 
   return (
-    <Box w={"100wv"} px={px} py={py} mt={mt}>
+    <Box w={"100wv"} px={px} pt={pt} pb={pb} mt={mt}>
       <Container maxW="1300px" p={"0"} my={my}>
         {children}
       </Container>
