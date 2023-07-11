@@ -19,7 +19,7 @@ export default function PreviewCard({ contact }: { contact: ContactProps }) {
   return (
     <Center py={6}>
       <Box
-        maxW={"320px"}
+        maxW={"330px"}
         w={"full"}
         bg={useColorModeValue("white", "gray.900")}
         boxShadow={"2xl"}
