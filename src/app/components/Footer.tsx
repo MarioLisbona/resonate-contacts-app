@@ -14,8 +14,7 @@ import { SiLinkedin } from "react-icons/si";
 export default function Footer() {
   return (
     <Box
-      bg={"brandLightBlue"}
-      color={useColorModeValue("gray.700", "gray.200")}
+      bg={useColorModeValue("brandLightBlue", "gray.900")}
       position="fixed"
       bottom={0}
       left={0}

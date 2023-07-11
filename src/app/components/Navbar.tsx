@@ -14,12 +14,13 @@ import {
   MenuItem,
   MenuDivider,
   useDisclosure,
+  useColorMode,
   useColorModeValue,
   Stack,
   Image,
   Text,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import logo from "../../../public/images/ResonateLogo.png";
 
 interface NavbarLinksProps {
@@ -43,11 +44,12 @@ const navbarLinks: Array<NavbarLinksProps> = [
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <>
       <Box
-        bg={"brandLightBlue"}
+        bg={useColorModeValue("brandLightBlue", "gray.900")}
         px={4}
         position="fixed"
         top={0}
@@ -81,6 +83,11 @@ export default function Navbar() {
               ))}
             </HStack>
           </HStack>
+          <Flex alignItems={"center"}>
+            <Button onClick={toggleColorMode}>
+              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            </Button>
+          </Flex>
         </Flex>
 
         {isOpen ? (
