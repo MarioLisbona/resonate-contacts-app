@@ -14,7 +14,7 @@ This is a simple contacts application created for the technical challenge sent a
 
 2. Once in the `/contacts-app` directory, in the terminal run the following command:
 
-- `git clone git@github.com:MarioLisbona/resonate-contacts-app.git`
+- `$ git clone git@github.com:MarioLisbona/resonate-contacts-app.git`
 
 - Navigate to the client folder:
 
