@@ -1,4 +1,4 @@
-This is a simple contacts application created for the technical challenge sent as part of an application for a Software Engineer Intership at [Resonate AI](https://www.resonate.com/). It was built with [Next.js](https://nextjs.org/) and bootstrapped with [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Styling for the application was implemented using [Chakra-UI](https://chakra-ui.com/).
+This is a simple contacts application created for the technical challenge sent as part of an application for a Software Engineer Intership at [Resonate AI](https://www.resonate.com/). It was built with [Next.js](https://nextjs.org/) and bootstrapped with [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Styling for the application was implemented using [Chakra-UI](https://chakra-ui.com/). I also tweaked and adjusted some template from [Chakra Templates](https://chakra-templates.dev/).
 
 ## Links
 
