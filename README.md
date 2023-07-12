@@ -14,7 +14,7 @@ This is a simple contacts application made for a the challenge sent as part of a
 
 2. Once in the `/contacts-app` directory, in the terminal run the following command:
 
-- `git@github.com:MarioLisbona/resonate-contacts-app.git`
+- `git clone git@github.com:MarioLisbona/resonate-contacts-app.git`
 
 - Navigate to the client folder:
 
@@ -31,6 +31,10 @@ This is a simple contacts application made for a the challenge sent as part of a
 
 - You will also be provided a link in the terminal to the port where the client server is running:
 
-  ![server port](docs/vite-localhost.png)
+  ![server port](docs/server-port.png)
 
 You will now be able to view all the Contacts in the App.
+
+- Run the command `ctrl+c` to kill the server.
+
+Enjoy 😊
