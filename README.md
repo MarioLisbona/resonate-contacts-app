@@ -27,13 +27,13 @@ This is a simple contacts application created for the technical challenge sent a
 
 - `npm run dev`
 
-- By default the development server will run at `http://localhost:3000/` however if this port is already in use another port will be provided.
+- By default the development server will run at `localhost:3000/` however if this port is already in use another port will be provided.
 
 - You will also be provided a link in the terminal to the port where the client server is running:
 
   ![server port](docs/server-port.png)
 
-- Open a browser with the address pointint to `http://localhost:3000/`. You will now be able to view all the Contacts in the App.
+- Open a browser with the address pointint to `localhost:3000/`. You will now be able to view all the Contacts in the App.
 
 - Use the command `ctrl+c` to kill the server.
 
