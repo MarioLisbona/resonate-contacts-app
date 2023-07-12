@@ -14,8 +14,14 @@ export default function PrevNext({
 }) {
   return (
     <Flex w={"100"} align={"center"} justify={"center"}>
-      <Link href={`/contacts/${contact.id - 1}`}>
-        <Button variant={"linkBtn"} isDisabled={contact.id <= 1}>
+      <Link
+        href={
+          contact.id !== 1
+            ? `/contacts/${contact.id - 1}`
+            : `/contacts/${contact.id}`
+        }
+      >
+        <Button variant={"linkBtn"} isDisabled={contact.id === 1}>
           <Icon
             as={GrCaretPrevious}
             w={{ base: "18px", md: "30px" }}
@@ -28,15 +34,21 @@ export default function PrevNext({
           Contacts
         </Button>
       </Link>
-      <Link href={`/contacts/${contact.id + 1}`}>
-        <Button variant={"linkBtn"} isDisabled={contact.id === length}>
+      <Button variant={"linkBtn"} isDisabled={contact.id === length}>
+        <Link
+          href={
+            contact.id !== length
+              ? `/contacts/${contact.id + 1}`
+              : `/contacts/${contact.id}`
+          }
+        >
           <Icon
             as={GrCaretNext}
             w={{ base: "18px", md: "30px" }}
             h={{ base: "18px", md: "30px" }}
           />
-        </Button>
-      </Link>
+        </Link>
+      </Button>
     </Flex>
   );
 }
