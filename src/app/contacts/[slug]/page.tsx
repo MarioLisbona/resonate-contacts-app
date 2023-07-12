@@ -30,7 +30,7 @@ export default async function Contact({ params: { slug } }: Params) {
   return (
     <SectionContainer>
       <ContactInfo contact={contact} />
-      <PrevNext contact={contact} length={contacts.length} />
+      <PrevNext contact={contact} arrayLength={contacts.length} />
     </SectionContainer>
   );
 }

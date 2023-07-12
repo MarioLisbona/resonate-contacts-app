@@ -7,10 +7,10 @@ import { GrCaretPrevious, GrCaretNext } from "react-icons/gr";
 
 export default function PrevNext({
   contact,
-  length,
+  arrayLength,
 }: {
   contact: ContactProps;
-  length: number;
+  arrayLength: number;
 }) {
   return (
     <Flex w={"100"} align={"center"} justify={"center"}>
@@ -40,7 +40,7 @@ export default function PrevNext({
           Contacts
         </Button>
       </Link>
-      {contact.id !== length ? (
+      {contact.id !== arrayLength ? (
         <Link href={`/contacts/${contact.id + 1}`}>
           <Button variant={"linkBtn"}>
             <Icon
@@ -52,7 +52,7 @@ export default function PrevNext({
         </Link>
       ) : (
         <Box>
-          <Button variant={"linkBtn"} isDisabled={contact.id === length}>
+          <Button variant={"linkBtn"} isDisabled={contact.id === arrayLength}>
             <Icon
               as={GrCaretNext}
               w={{ base: "18px", md: "30px" }}
