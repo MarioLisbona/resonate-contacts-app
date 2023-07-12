@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a simple contacts application made for a the challenge sent as part of an application for a Software Engineer Intership at [Resonate AI](https://www.resonate.com/). It was built with [Next.js](https://nextjs.org/) and bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) also using [Chakra-UI](https://chakra-ui.com/) for styling.
 
-## Getting Started
+## Links
 
-First, run the development server:
+🌏 Deployed Application: [https://resonate-contacts-app.vercel.app/](https://resonate-contacts-app.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+💾 Github Repository: [https://github.com/MarioLisbona/resonate-contacts-app](https://github.com/MarioLisbona/resonate-contacts-app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation Instructions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Create a directory called `contacts-app` and navigate into that directory.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `$ mkdir contacts-app && cd contacts-app`
 
-## Learn More
+2. Once in the `/contacts-app` directory, in the terminal run the following command:
 
-To learn more about Next.js, take a look at the following resources:
+- `git@github.com:MarioLisbona/resonate-contacts-app.git`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Navigate to the client folder:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `$ cd resonate-contacts-app`
+- Install npm packages
 
-## Deploy on Vercel
+- `npm install --legacy-peer-deps`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- run the server with the following command:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `npm run dev`
+
+- By default the server will run at `http://localhost:3000/` however if this port is already in use another port will be provided.
+
+- You will also be provided a link in the terminal to the port where the client server is running:
+
+  ![server port](docs/vite-localhost.png)
+
+You will now be able to view all the Contacts in the App.
