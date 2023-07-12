@@ -40,21 +40,27 @@ export default function PrevNext({
           Contacts
         </Button>
       </Link>
-      <Button variant={"linkBtn"} isDisabled={contact.id === length}>
-        <Link
-          href={
-            contact.id !== length
-              ? `/contacts/${contact.id + 1}`
-              : `/contacts/${contact.id}`
-          }
-        >
-          <Icon
-            as={GrCaretNext}
-            w={{ base: "18px", md: "30px" }}
-            h={{ base: "18px", md: "30px" }}
-          />
+      {contact.id !== length ? (
+        <Link href={`/contacts/${contact.id + 1}`}>
+          <Button variant={"linkBtn"}>
+            <Icon
+              as={GrCaretNext}
+              w={{ base: "18px", md: "30px" }}
+              h={{ base: "18px", md: "30px" }}
+            />
+          </Button>
         </Link>
-      </Button>
+      ) : (
+        <Box>
+          <Button variant={"linkBtn"} isDisabled={contact.id === length}>
+            <Icon
+              as={GrCaretNext}
+              w={{ base: "18px", md: "30px" }}
+              h={{ base: "18px", md: "30px" }}
+            />
+          </Button>
+        </Box>
+      )}
     </Flex>
   );
 }
