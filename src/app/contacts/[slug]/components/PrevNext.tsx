@@ -29,7 +29,7 @@ export default function PrevNext({
         </Button>
       </Link>
       <Link href={`/contacts/${contact.id + 1}`}>
-        <Button variant={"linkBtn"} isDisabled={contact.id === length - 1}>
+        <Button variant={"linkBtn"} isDisabled={contact.id === length}>
           <Icon
             as={GrCaretNext}
             w={{ base: "18px", md: "30px" }}
