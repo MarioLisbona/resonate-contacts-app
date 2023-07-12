@@ -21,20 +21,20 @@ This is a simple contacts application created for the technical challenge sent a
 - `$ cd resonate-contacts-app`
 - Install npm packages
 
-- `npm install --legacy-peer-deps`
+- `npm install`
 
-- run the server with the following command:
+- Run the development server with the following command:
 
 - `npm run dev`
 
-- By default the server will run at `http://localhost:3000/` however if this port is already in use another port will be provided.
+- By default the development server will run at `http://localhost:3000/` however if this port is already in use another port will be provided.
 
 - You will also be provided a link in the terminal to the port where the client server is running:
 
   ![server port](docs/server-port.png)
 
-You will now be able to view all the Contacts in the App.
+- Open a browser with the address pointint to `http://localhost:3000/`. You will now be able to view all the Contacts in the App.
 
-- Run the command `ctrl+c` to kill the server.
+- Use the command `ctrl+c` to kill the server.
 
 Enjoy 😊
